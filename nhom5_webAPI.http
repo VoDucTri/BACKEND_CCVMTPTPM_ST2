@@ -1,0 +1,6 @@
+@nhom5_webAPI_HostAddress = http://localhost:5188
+
+GET {{nhom5_webAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
