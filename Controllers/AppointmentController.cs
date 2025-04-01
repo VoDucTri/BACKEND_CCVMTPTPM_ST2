@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using nhom5_webAPI.Models;
 using nhom5_webAPI.Repositories;
+using System.Security.Claims;
 
 namespace nhom5_webAPI.Controllers
 {
@@ -26,18 +27,37 @@ namespace nhom5_webAPI.Controllers
             _serviceRepository = serviceRepository;
         }
 
-        // Lấy tất cả Appointment
-        [AllowAnonymous]
+        // Lấy tất cả Appointment (Chỉ cho phép Admin)
+        [Authorize(Policy = "Appointment.View")]
         [HttpGet]
         public async Task<IActionResult> GetAllAppointments()
         {
-            var appointments = await _appointmentRepository.GetAllAsync();
-            return Ok(appointments);
+            // Kiểm tra vai trò của người dùng
+            if (User.IsInRole("Admin"))
+            {
+                // Admin có quyền xem tất cả các cuộc hẹn
+                var appointments = await _appointmentRepository.GetAllAsync();
+                return Ok(appointments);
+            }
+
+            // Nếu là User, chỉ có thể xem các cuộc hẹn của chính mình
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);  // Lấy UserId từ Claims
+            var userAppointments = await _appointmentRepository.GetAppointmentsByUserIdAsync(userId);
+
+            // Nếu không có cuộc hẹn của user thì trả về NotFound
+            if (!userAppointments.Any())
+            {
+                return NotFound(new { Error = "No appointments found for this user." });
+            }
+
+            // Trả về các cuộc hẹn của user
+            return Ok(userAppointments);
         }
 
+
         // Lấy Appointment theo ID
-        [AllowAnonymous]
         [HttpGet("{id}")]
+        [Authorize(Policy = "Appointment.View")]
         public async Task<IActionResult> GetAppointmentById(int id)
         {
             var appointment = await _appointmentRepository.GetAppointmentWithDetailsAsync(id);
@@ -64,11 +84,21 @@ namespace nhom5_webAPI.Controllers
             });
         }
 
+
         // Lấy danh sách Appointment theo UserId
-        [Authorize(Policy = "Appointment.View")]  // Policy-based Authorization
+        [Authorize(Policy = "Appointment.View")]
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetAppointmentsByUserId(string userId)
         {
+            // Kiểm tra nếu User cố gắng xem cuộc hẹn của người khác
+            if (User.IsInRole("User"))
+            {
+                if (userId == User.FindFirstValue(ClaimTypes.NameIdentifier)) // Nếu User cố gắng xem cuộc hẹn của người khác
+                {
+                    return Forbid(); // Người dùng không thể xem cuộc hẹn của người khác
+                }
+            }
+
             var appointments = await _appointmentRepository.GetAppointmentsByUserIdAsync(userId);
             if (!appointments.Any())
                 return NotFound(new { Error = "No appointments found for this user." });
@@ -87,20 +117,36 @@ namespace nhom5_webAPI.Controllers
             }));
         }
 
-        // Tạo mới Appointment
-        [Authorize(Policy = "Appointment.Create")] // Policy-based Authorization
+
+        [Authorize(Policy = "Appointment.Create")]
         [HttpPost]
         public async Task<IActionResult> AddAppointment([FromBody] Appointment appointment)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                return BadRequest(new
+                {
+                    Errors = ModelState.Values
+                        .SelectMany(v => v.Errors)
+                        .Select(e => e.ErrorMessage)
+                });
+            }
 
-            // Kiểm tra UserName và lấy UserId
-            var user = await _userRepository.GetByUserNameAsync(appointment.UserId);
+            
+            var user = await _userRepository.GetByUserNameAsync(appointment.UserId); 
             if (user == null)
-                return BadRequest(new { Error = "Invalid UserId." });
+            {
+                return BadRequest(new { Error = "Invalid UserName." });
+            }
 
-            appointment.UserId = user.Id; // Gán đúng UserId từ UserName
+            var userId = user.Id; 
+
+            if (appointment.UserId != user.UserName) 
+            {
+                return Forbid(); 
+            }
+
+            appointment.UserId = userId; 
 
             try
             {
@@ -114,6 +160,7 @@ namespace nhom5_webAPI.Controllers
                 return StatusCode(500, new { Error = "An error occurred while creating the appointment.", Details = ex.Message });
             }
         }
+
 
         // Cập nhật Appointment
         [Authorize(Policy = "Appointment.Edit")]  // Policy-based Authorization
