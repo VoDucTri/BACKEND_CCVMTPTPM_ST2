@@ -28,30 +28,34 @@ namespace nhom5_webAPI.Controllers
         }
 
         // Lấy tất cả Appointment (Chỉ cho phép Admin)
-        [Authorize(Policy = "Appointment.View")]
+        
+        // Phương thức lấy username từ token
+        private string GetUsername()
+        {
+            var username = User.FindFirstValue(ClaimTypes.Name);
+            return username;
+        }
+
         [HttpGet]
+        [Authorize(Policy = "Appointment.View")]
         public async Task<IActionResult> GetAllAppointments()
         {
-            // Kiểm tra vai trò của người dùng
             if (User.IsInRole("Admin"))
             {
                 // Admin có quyền xem tất cả các cuộc hẹn
                 var appointments = await _appointmentRepository.GetAllAsync();
-                return Ok(appointments);
+                return Ok(appointments ?? new List<Appointment>());
             }
 
-            // Nếu là User, chỉ có thể xem các cuộc hẹn của chính mình
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);  // Lấy UserId từ Claims
-            var userAppointments = await _appointmentRepository.GetAppointmentsByUserIdAsync(userId);
-
-            // Nếu không có cuộc hẹn của user thì trả về NotFound
-            if (!userAppointments.Any())
+            // Nếu là User, lấy các cuộc hẹn dựa trên username
+            var username = GetUsername();
+            if (string.IsNullOrEmpty(username))
             {
-                return NotFound(new { Error = "No appointments found for this user." });
+                return BadRequest(new { Message = "Không thể lấy username từ token." });
             }
 
-            // Trả về các cuộc hẹn của user
-            return Ok(userAppointments);
+            var userAppointments = await _appointmentRepository.GetAppointmentsByUsernameAsync(username);
+            return Ok(userAppointments ?? new List<Appointment>());
         }
 
 
