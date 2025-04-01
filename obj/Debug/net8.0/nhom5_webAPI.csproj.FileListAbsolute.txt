@@ -880,3 +880,4 @@ C:\Users\ADMIN\Downloads\nhom5_webAPI_KhanhTuanXuLyTiepTuc\nhom5_webAPI\nhom5_we
 C:\Users\ADMIN\Downloads\nhom5_webAPI_KhanhTuanXuLyTiepTuc\nhom5_webAPI\nhom5_webAPI\obj\Debug\net8.0\nhom5_webAPI.pdb
 C:\Users\ADMIN\Downloads\nhom5_webAPI_KhanhTuanXuLyTiepTuc\nhom5_webAPI\nhom5_webAPI\obj\Debug\net8.0\nhom5_webAPI.genruntimeconfig.cache
 C:\Users\ADMIN\Downloads\nhom5_webAPI_KhanhTuanXuLyTiepTuc\nhom5_webAPI\nhom5_webAPI\obj\Debug\net8.0\ref\nhom5_webAPI.dll
+C:\Users\LENOVO\OneDrive\文档\LTtrenThietBiDiDong\nhom5_webAPI\nhom5_webAPI\obj\Debug\net8.0\nhom5_webAPI.sourcelink.json

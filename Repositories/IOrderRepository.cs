@@ -4,6 +4,8 @@ namespace nhom5_webAPI.Repositories
 {
     public interface IOrderRepository : IRepository<Order>
     {
-        Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId); // Đổi int thành string
+        Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId); 
+        Task<IEnumerable<Order>> GetOrdersByUsernameAsync(string username); 
+        Task<IEnumerable<Order>> GetAllAsync(); 
     }
 }

@@ -28,26 +28,39 @@ namespace nhom5_webAPI.Controllers
             _productRepository = productRepository;
         }
 
-        private string GetUserId()
+        // Phương thức lấy username từ token
+        private string GetUsername()
         {
-            return User.FindFirstValue(ClaimTypes.NameIdentifier);  // Lấy UserId từ Claims
+            // Lấy username từ claim "name" (ClaimTypes.Name)
+            var username = User.FindFirstValue(ClaimTypes.Name);
+
+            // Nếu không tìm thấy, trả về null và xử lý ở nơi gọi
+            return username;
         }
 
         [HttpGet]
         [Authorize(Policy = "Order.View")]
         public async Task<IActionResult> GetAllOrders()
         {
-            if (User.IsInRole("User"))
+            var username = GetUsername();
+            if (string.IsNullOrEmpty(username))
             {
-                var userId = User.Identity.Name;
-                var userOrders = await _orderRepository.GetOrdersByUserIdAsync(userId); // Đổi tên biến orders thành userOrders 
-                return Ok(userOrders);
+                return BadRequest(new { Message = "Không thể lấy username từ token." });
             }
 
-            var allOrders = await _orderRepository.GetAllAsync(); // Đổi tên biến orders thành allOrders
-            return Ok(allOrders);
+            if (User.IsInRole("User"))
+            {
+                // Lấy đơn hàng dựa trên username
+                var userOrders = await _orderRepository.GetOrdersByUsernameAsync(username);
+                // Trả về mảng rỗng nếu không tìm thấy đơn hàng, thay vì 404
+                return Ok(userOrders ?? new List<Order>());
+            }
 
+            // Nếu không phải role User (ví dụ: Admin), lấy tất cả đơn hàng
+            var allOrders = await _orderRepository.GetAllAsync();
+            return Ok(allOrders ?? new List<Order>());
         }
+
 
         [HttpGet("{id}")]
         [Authorize(Policy = "Order.View")]
@@ -57,10 +70,9 @@ namespace nhom5_webAPI.Controllers
             if (order == null)
                 return NotFound();
 
-            // Kiểm tra xem user có quyền xem đơn hàng này không
             if (User.IsInRole("User") && order.UserId != User.Identity.Name)
             {
-                return Forbid(); // Người dùng không thể xem đơn hàng của người khác
+                return StatusCode(403); // Trả về 403 Forbidden theo yêu cầu
             }
 
             return Ok(order);
@@ -70,13 +82,15 @@ namespace nhom5_webAPI.Controllers
         [Authorize(Policy = "Order.View")]
         public async Task<IActionResult> GetOrdersByUser(string userId)
         {
-            // Kiểm tra xem user có quyền xem đơn hàng của người khác không
             if (User.IsInRole("User") && userId != User.Identity.Name)
             {
-                return Forbid(); // Người dùng không thể xem đơn hàng của người khác
+                return StatusCode(403); // Trả về 403 Forbidden theo yêu cầu
             }
 
-            var userOrders = await _orderRepository.GetOrdersByUserIdAsync(userId); // Lấy đơn hàng theo userId
+            var userOrders = await _orderRepository.GetOrdersByUserIdAsync(userId);
+            if (userOrders == null || !userOrders.Any())
+                return NotFound(); // Thêm kiểm tra nếu không tìm thấy đơn hàng
+
             return Ok(userOrders);
         }
 
