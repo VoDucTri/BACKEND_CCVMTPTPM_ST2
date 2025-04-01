@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using nhom5_webAPI.Models;
 using nhom5_webAPI.Repositories;
+using System.Security.Claims;
 
 namespace nhom5_webAPI.Controllers
 {
@@ -25,6 +26,11 @@ namespace nhom5_webAPI.Controllers
             _userRepository = userRepository;
             _petRepository = petRepository;
             _productRepository = productRepository;
+        }
+
+        private string GetUserId()
+        {
+            return User.FindFirstValue(ClaimTypes.NameIdentifier);  // Lấy UserId từ Claims
         }
 
         [HttpGet]
