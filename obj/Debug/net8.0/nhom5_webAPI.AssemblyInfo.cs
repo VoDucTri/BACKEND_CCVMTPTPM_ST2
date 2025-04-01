@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nhom5_webAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06428e1277553cdf0e7904887421b78dae74135c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+827666bedf1deaf26dd10741d29813a619d8e64a")]
 [assembly: System.Reflection.AssemblyProductAttribute("nhom5_webAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nhom5_webAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
