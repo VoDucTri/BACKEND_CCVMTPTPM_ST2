@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,24 +39,12 @@
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|d:\\sangt2 backend\\backend_ccvmtptpm_st2\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DCD62F7-1ED3-4849-DEAC-C8D974607818}|nhom5_webAPI.csproj|solutionrelative:repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,39 +118,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T16:06:06.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "IRepository.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IRepository.cs",
               "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IRepository.cs",
               "RelativeToolTip": "Repositories\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T15:50:14.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AppointmentRepository.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\AppointmentRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\AppointmentRepository.cs",
               "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\AppointmentRepository.cs",
               "RelativeToolTip": "Repositories\\AppointmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T05:56:00.454Z",
               "EditorCaption": ""
@@ -161,29 +148,16 @@
               "Title": "AppointmentController.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\AppointmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
-              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\AppointmentController.cs*",
-              "RelativeToolTip": "Controllers\\AppointmentController.cs*",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAQwF8AAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T05:38:03.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ServiceController.cs",
-              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\ServiceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
-              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\ServiceController.cs",
-              "RelativeToolTip": "Controllers\\ServiceController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:55:21.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\OrderRepository.cs",
@@ -196,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "RegistrationModel.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Models\\RegistrationModel.cs",
               "RelativeDocumentMoniker": "Models\\RegistrationModel.cs",
@@ -209,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Appointment.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -222,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -235,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Service.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Models\\Service.cs",
               "RelativeDocumentMoniker": "Models\\Service.cs",
@@ -248,7 +222,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IAppointmentRepository.cs",
+              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IAppointmentRepository.cs",
+              "RelativeToolTip": "Repositories\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T05:55:45.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-01T05:00:14.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T14:55:21.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T16:06:06.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IUserRepository.cs",
@@ -261,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "IServiceRepository.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IServiceRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IServiceRepository.cs",
@@ -274,20 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IAppointmentRepository.cs",
-              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IAppointmentRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IAppointmentRepository.cs",
-              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Repositories\\IAppointmentRepository.cs",
-              "RelativeToolTip": "Repositories\\IAppointmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T05:55:45.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "Models\\LoginModel.cs",
@@ -300,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
@@ -313,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -339,19 +352,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-01T05:00:14.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "AuthenticateController.cs",
               "DocumentMoniker": "D:\\SangT2 backend\\BACKEND_CCVMTPTPM_ST2\\Controllers\\AuthenticateController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthenticateController.cs",

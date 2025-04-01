@@ -64,6 +64,28 @@ namespace nhom5_webAPI.Controllers
             if (appointment == null)
                 return NotFound(new { Error = "Appointment not found." });
 
+            // Lấy UserName từ Claims của người dùng hiện tại
+            var userName = User.FindFirstValue(ClaimTypes.Name);
+            if (string.IsNullOrEmpty(userName))
+            {
+                return Forbid(); // Trả về 403 nếu không tìm thấy UserName trong claims
+            }
+
+            // Lấy UserId từ UserName
+            var user = await _userRepository.GetByUserNameAsync(userName);
+            if (user == null)
+            {
+                return Forbid(); // Trả về 403 nếu không tìm thấy user
+            }
+            var currentUserId = user.Id;
+
+            // Kiểm tra quyền truy cập
+            if (!User.IsInRole("Admin") && appointment.UserId != currentUserId)
+            {
+                return Forbid(); // Trả về 403 nếu không phải Admin và không phải chủ sở hữu appointment
+            }
+
+            // Trả về thông tin appointment nếu hợp lệ
             return Ok(new
             {
                 appointment.AppointmentId,
