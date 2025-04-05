@@ -142,6 +142,7 @@ namespace nhom5_webAPI.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpPost("send-otp")]
         public async Task<IActionResult> SendOtp([FromBody] string username)
         {
@@ -163,6 +164,7 @@ namespace nhom5_webAPI.Controllers
             return Ok(new { Status = true, otp = otpCode, Message = "OTP generated successfully" });
         }
 
+        [AllowAnonymous]
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
         {
