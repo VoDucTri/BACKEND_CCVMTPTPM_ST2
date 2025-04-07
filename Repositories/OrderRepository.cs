@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using nhom5_webAPI.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace nhom5_webAPI.Repositories
 {
@@ -12,35 +15,75 @@ namespace nhom5_webAPI.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId)
+        public async Task<Order> GetOrderByIdWithDetailsAsync(int id)
         {
-            return await _context.Orders
-                .Where(o => o.UserId == userId) // So sánh đúng kiểu dữ liệu
-                .Include(o => o.OrderDetails) // Include để lấy danh sách OrderDetails
-                .ToListAsync();
-        }
-        public async Task<IEnumerable<Order>> GetOrdersByUsernameAsync(string username)
-        {
-            // Tìm userId từ username trong bảng Users
-            var user = await _context.Users
-                .Where(u => u.UserName == username)
-                .Select(u => u.Id) // Giả sử cột Id trong bảng Users chứa userId
-                .FirstOrDefaultAsync();
+            var order = await _context.Orders
+                .Include(o => o.OrderDetails)
+                .Include(o => o.User)
+                .FirstOrDefaultAsync(o => o.OrderId == id);
 
-            if (user == null)
+            if (order != null && order.OrderDetails == null)
             {
-                return new List<Order>(); // Trả về mảng rỗng nếu không tìm thấy user
+                order.OrderDetails = new List<OrderDetail>();
             }
 
-            // Lấy đơn hàng dựa trên userId
-            return await _context.Orders
-                .Where(o => o.UserId == user)
-                .ToListAsync();
+            return order;
         }
 
-        public async Task<IEnumerable<Order>> GetAllAsync()
+        public new async Task<IEnumerable<Order>> GetAllAsync()
         {
-            return await _context.Orders.ToListAsync();
+            var orders = await _context.Orders
+                .Include(o => o.OrderDetails)
+                .Include(o => o.User)
+                .ToListAsync();
+
+            foreach (var order in orders)
+            {
+                if (order.OrderDetails == null)
+                {
+                    order.OrderDetails = new List<OrderDetail>();
+                }
+            }
+
+            return orders;
+        }
+
+        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId)
+        {
+            var orders = await _context.Orders
+                .Where(o => o.UserId == userId)
+                .Include(o => o.OrderDetails)
+                .Include(o => o.User)
+                .ToListAsync();
+
+            foreach (var order in orders)
+            {
+                if (order.OrderDetails == null)
+                {
+                    order.OrderDetails = new List<OrderDetail>();
+                }
+            }
+
+            return orders;
+        }
+
+        public async Task<IEnumerable<Order>> GetOrdersByUsernameAsync(string username)
+        {
+            var orders = await _context.Orders
+                .Include(o => o.OrderDetails)
+                .Include(o => o.User)
+                .Where(o => o.User != null && o.User.UserName == username)
+                .ToListAsync();
+
+            foreach (var order in orders)
+            {
+                if (order.OrderDetails == null)
+                {
+                    order.OrderDetails = new List<OrderDetail>();
+                }
+            }
+
+            return orders;
         }
     }
 }
